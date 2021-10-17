@@ -38,7 +38,7 @@ jobs:
         id: sub
         uses: Silverlan/github_action_test1/sub_action@main
 
-      - name: Clone
+      - name: Print
         shell: bash
         id: clone
         run: |
