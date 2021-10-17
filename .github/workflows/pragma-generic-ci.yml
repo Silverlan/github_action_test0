@@ -43,3 +43,4 @@ jobs:
         id: clone
         run: |
           echo "SubOutput: ${{ steps.sub.outputs.output_var }}"
+          echo "TEST_SUB_SUB_ENV: ${{ env.TEST_SUB_SUB_ENV }}"
