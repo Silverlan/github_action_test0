@@ -34,6 +34,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Download common external libs
-        id: subsub
+      - name: Subaction
+        id: sub
         uses: Silverlan/github_action_test1/sub_action@main
+
+      - name: Clone
+        shell: bash
+        id: clone
+        run: |
+          echo "SubOutput: ${{ steps.sub.outputs.output_var }}"
