@@ -50,6 +50,7 @@ jobs:
       - shell: bash
         run: |
           cmakeVar2=" VAR_TEST_2"
+          printf "ASDF"  >> cmake_vars.txt
 
       - name: Var2
         uses: Silverlan/common_actions/define_cmake_var@actions
