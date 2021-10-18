@@ -45,7 +45,7 @@ jobs:
       - name: Var1
         uses: Silverlan/common_actions/define_cmake_var@actions
         with:
-          cmake_var: '$cmakeVar1'
+          cmake_var: 'test_var1'
         
       - shell: bash
         run: |
@@ -54,7 +54,7 @@ jobs:
       - name: Var2
         uses: Silverlan/common_actions/define_cmake_var@actions
         with:
-          cmake_var: '$cmakeVar2'
+          cmake_var: 'test_var2'
 
       - name: Var3
         id: var3
