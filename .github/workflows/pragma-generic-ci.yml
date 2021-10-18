@@ -34,31 +34,31 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Subaction
-        id: sub
-        uses: Silverlan/github_action_test1/sub_action@main
+      #- name: Subaction
+      #  id: sub
+      #  uses: Silverlan/github_action_test1/sub_action@main
         
-      - shell: bash
-        run: |
-          cmakeVar1=" VAR_TEST_1"
+      #- shell: bash
+      #  run: |
+      #    cmakeVar1=" VAR_TEST_1"
 
-      - name: Var1
-        uses: Silverlan/common_actions/define_cmake_var@actions
-        with:
-          cmake_var: 'test_var1'
+      #- name: Var1
+      #  uses: Silverlan/common_actions/define_cmake_var@actions
+      #  with:
+      #    cmake_var: 'test_var1'
         
-      - shell: bash
-        run: |
-          cmakeVar2=" VAR_TEST_2"
+      #- shell: bash
+      #  run: |
+      #    cmakeVar2=" VAR_TEST_2"
 
-      - name: Var2
-        uses: Silverlan/common_actions/define_cmake_var@actions
-        with:
-          cmake_var: 'test_var2'
+      #- name: Var2
+      #  uses: Silverlan/common_actions/define_cmake_var@actions
+      #  with:
+      #    cmake_var: 'test_var2'
 
-      - name: Var3
-        id: var3
-        uses: Silverlan/common_actions/get_cmake_vars@actions
+      #- name: Var3
+      #  id: var3
+      #  uses: Silverlan/common_actions/get_cmake_vars@actions
 
       - name: Print
         shell: bash
