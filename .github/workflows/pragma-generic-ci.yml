@@ -40,7 +40,7 @@ jobs:
         
       - shell: bash
         run: |
-          VAR_TEST_1=ThisIsATest
+          VAR_TEST_1="ThisIsATest -ThisIsAAnotherTest"
           echo "cmakeVar1=$(echo $VAR_TEST_1)" >> $GITHUB_ENV
 
       - name: Var1
