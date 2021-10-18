@@ -56,9 +56,9 @@ jobs:
       #  with:
       #    cmake_var: 'test_var2'
 
-      #- name: Var3
-      #  id: var3
-      #  uses: Silverlan/common_actions/get_cmake_vars@actions
+      - name: Var3
+        id: var3
+        uses: Silverlan/common_actions/get_cmake_vars@actions
 
       - name: Print
         shell: bash
