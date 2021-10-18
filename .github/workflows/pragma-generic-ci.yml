@@ -37,13 +37,36 @@ jobs:
       - name: Subaction
         id: sub
         uses: Silverlan/github_action_test1/sub_action@main
+        
+      - shell: bash
+        run: |
+          cmakeVar1=" VAR_TEST_1"
+
+      - name: Var1
+        uses: Silverlan/common_actions/define_cmake_var@actions
+        with:
+          cmake_var: '$cmakeVar1'
+        
+      - shell: bash
+        run: |
+          cmakeVar2=" VAR_TEST_2"
+
+      - name: Var2
+        uses: Silverlan/common_actions/define_cmake_var@actions
+        with:
+          cmake_var: '$cmakeVar2'
+
+      - name: Var3
+        id: var3
+        uses: Silverlan/common_actions/get_cmake_vars@actions
 
       - name: Print
         shell: bash
         id: clone
         run: |
-          echo "SubOutput: ${{ steps.sub.outputs.output_var }}"
-          echo "TEST_SUB_SUB_ENV: ${{ env.TEST_SUB_SUB_ENV }}"
+          echo "Output: ${{ steps.sub.var3.outputs.cmake_vars }}"
+          #echo "SubOutput: ${{ steps.sub.outputs.output_var }}"
+          #echo "TEST_SUB_SUB_ENV: ${{ env.TEST_SUB_SUB_ENV }}"
           
-          value="$(cat cmake_vars.txt)"
-          echo "FINAL: $value"
+          #value="$(cat cmake_vars.txt)"
+          #echo "FINAL: $value"
