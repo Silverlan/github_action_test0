@@ -45,3 +45,6 @@ jobs:
         run: |
           echo "SubOutput: ${{ steps.sub.outputs.output_var }}"
           echo "TEST_SUB_SUB_ENV: ${{ env.TEST_SUB_SUB_ENV }}"
+          
+          value="$(cat cmake_vars.txt)"
+          echo "FINAL: $value"
