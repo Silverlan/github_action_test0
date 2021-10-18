@@ -68,7 +68,7 @@ jobs:
           value="$(cat cmake_vars.txt)"
           echo "$value"
         
-          echo "Output: ${{ steps.sub.var3.outputs.cmake_vars }}"
+          echo "Output: ${{ steps.var3.outputs.cmake_vars }}"
           #echo "SubOutput: ${{ steps.sub.outputs.output_var }}"
           #echo "TEST_SUB_SUB_ENV: ${{ env.TEST_SUB_SUB_ENV }}"
           
