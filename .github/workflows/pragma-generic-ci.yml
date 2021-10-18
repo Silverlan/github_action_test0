@@ -40,7 +40,7 @@ jobs:
         
       - shell: bash
         run: |
-          cmakeVar1=" VAR_TEST_1"
+          echo "cmakeVar1=$(echo VAR_TEST_1)" >> $GITHUB_ENV
 
       - name: Var1
         uses: Silverlan/common_actions/define_cmake_var@actions
